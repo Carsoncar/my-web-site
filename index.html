@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Your Old Tech</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background-color: #4CAF50;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    main h2 {
+      color: #4CAF50;
+      margin-bottom: 1rem;
+    }
+    form {
+      background: #fff;
+      padding: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    form label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #45a049;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+      margin-top: 2rem;
+    }
+    #successMessage {
+      display: none;
+      color: green;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Donate Your Old Tech</h1>
+    <p>Give your old devices a new purpose by donating them to me to fix and sell!</p>
+  </header>
+  <main>
+    <h2>How to Donate</h2>
+    <p>Fill out the form below to let us know what tech you'd like to donate. We'll reach out to you with next steps!</p>
+    <!-- Form Action updated -->
+    <form action="https://formspree.io/f/xovjjpjl" method="POST">
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" placeholder="Let us know what you want to donate" required></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+    <div id="successMessage">Thank you for your donation! We will contact you soon.</div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Donate Your Old Tech. All rights reserved.</p>
+  </footer>
+  <script>
+    // Display the success message on form submission
+    document.querySelector("form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      // Show success message after form submission
+      document.getElementById("successMessage").style.display = "block";
+      // Hide the form after submission
+      event.target.style.display = "none";
+    });
+  </script>
+</body>
+</html>
